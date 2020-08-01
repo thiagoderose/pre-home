@@ -1,21 +1,18 @@
-import React, { Fragment } from 'react';
-import { useIntl, defineMessages } from 'react-intl';
+import React from 'react';
 
-const messages = defineMessages({
-  test: {
-    id: `test`,
-    defaultMessage: 'Oh geez!',
-  },
-});
+import Fullscreen from 'components/Fullscreen';
+import Header from 'components/Header';
+import Callout from 'components/Callout';
+import ProductSelector from 'components/ProductSelector';
+import Footer from 'components/Footer';
 
-const Index = () => {
-  const intl = useIntl();
-
-  return (
-    <Fragment>
-      { intl.formatMessage(messages.test) }
-    </Fragment>
-  );
-};
+const Index = () => (
+  <Fullscreen>
+    <Header />
+    <Callout />
+    <ProductSelector />
+    <Footer />
+  </Fullscreen>
+);
 
 export default Index;
