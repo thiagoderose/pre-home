@@ -1,3 +1,5 @@
+import { SCREEN_SIZES } from '@livipdev/core/styles/theme/constants';
+
 const productItem = {
   flexGrow: 1,
   height: '100%',
@@ -26,6 +28,10 @@ const styles = theme => ({
     flexGrow: 1,
     display: 'flex',
     width: '100%',
+
+    [theme.breakpoints.down(SCREEN_SIZES.SMALL)]: {
+      flexDirection: 'column',
+    },
   },
 
   product: {
@@ -34,11 +40,23 @@ const styles = theme => ({
     cursor: 'pointer',
     transition: '0.4s all ease-in-out',
 
+    [theme.breakpoints.down(SCREEN_SIZES.SMALL)]: {
+      flexDirection: 'column',
+    },
+
     '&:hover': {
       flexGrow: 6,
 
+      [theme.breakpoints.down(SCREEN_SIZES.MEDIUM)]: {
+        flexGrow: 10,
+      },
+
+      [theme.breakpoints.down(SCREEN_SIZES.EXTRA_SMALL)]: {
+        flexGrow: 1,
+      },
+
       '& $hidden': {
-        animation: '$expandDescription 0.8s forwards',
+        animation: '$descriptionDelayedFadeIn 0.8s forwards',
       },
     },
   },
@@ -76,17 +94,36 @@ const styles = theme => ({
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'flex-end',
-    overflow: 'hidden',
     width: '95%',
-    height: '100%',
+
+    [theme.breakpoints.down(SCREEN_SIZES.EXTRA_LARGE)]: {
+      padding: '0 0 5rem 3rem',
+    },
+
+    [theme.breakpoints.down(SCREEN_SIZES.MEDIUM)]: {
+      padding: '0 0 2rem 3rem',
+    },
   },
 
   hidden: {
     color: theme.palette.common.white,
-    width: 0,
-    height: 0,
     position: 'absolute',
+    width: '350px',
+    opacity: 0,
     right: 0,
+    bottom: 50,
+
+    [theme.breakpoints.down(SCREEN_SIZES.MEDIUM)]: {
+      width: '200px',
+    },
+
+    [theme.breakpoints.down(SCREEN_SIZES.SMALL)]: {
+      width: '90%',
+    },
+
+    [theme.breakpoints.down(SCREEN_SIZES.EXTRA_SMALL)]: {
+      display: 'none',
+    },
 
     '& p': {
       fontSize: '17px',
@@ -94,22 +131,20 @@ const styles = theme => ({
       '&:last-child': {
         textAlign: 'right',
         textDecoration: 'underline',
+        paddingTop: '1rem',
       },
     },
   },
 
-  '@keyframes expandDescription': {
+  '@keyframes descriptionDelayedFadeIn': {
     '0%': {
-      width: 0,
-      height: '18%',
+      opacity: 0,
     },
     '50%': {
-      width: 0,
-      height: '18%',
+      opacity: 0,
     },
     '100%': {
-      width: '30%',
-      height: '18%',
+      opacity: 1,
     },
   },
 });
