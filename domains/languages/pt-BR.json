@@ -1,5 +1,11 @@
 {
   "components.callout.title": "Lorem ipsum dolor sit amet?",
   "components.callout.subtitle": "Lorem Ipsum available, but the majority suffered alteration in some.",
-  "components.footter.address": "Rua Capote Valente, 39 - 05409-000 - São Paulo, SP"
+
+  "components.footter.address": "Rua Capote Valente, 39 - 05409-000 - São Paulo, SP",
+
+  "components.product_selector.tickets.description": "It is a long established fact that a reader will be distracted by the readable content of a page when  sed lorem.",
+  "components.product_selector.travel.description": "It is a long established fact that a reader will be distracted by the readable content of a page when  sed lorem.",
+  "components.product_selector.one.description": "It is a long established fact that a reader will be distracted by the readable content of a page when  sed lorem.",
+  "components.product_selector.learn_more": "Learn more"
 }
