@@ -6,9 +6,9 @@ const stage = {
 };
 
 const locale = {
-  path: 'domains/languages',
+  path: 'locales',
   extension: '.json',
-  rootLocation: '../..',
+  rootLocation: '..',
   wildcard: '*',
   encoding: 'utf8',
   default: process.env.DEFAULT_LOCALE,
