@@ -8,7 +8,7 @@ const stage = {
 const locale = {
   path: 'locales',
   extension: '.json',
-  rootLocation: '..',
+  rootLocation: '../..',
   wildcard: '*',
   encoding: 'utf8',
   default: process.env.DEFAULT_LOCALE,
@@ -19,7 +19,7 @@ const server = {
   port: process.env.PORT || '3000',
 };
 
-const relativeAppDir = './domains/app';
+const relativeAppDir = './app';
 
 module.exports.stage = stage;
 module.exports.locale = locale;
