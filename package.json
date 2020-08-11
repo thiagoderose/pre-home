@@ -11,6 +11,7 @@
     "build": "next build app",
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix",
+    "start": "next start app",
     "start:dev": "next dev app"
   },
   "dependencies": {
