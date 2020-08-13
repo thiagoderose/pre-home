@@ -35,7 +35,7 @@ const ProductSelector = props => (
           customClass={props.classes.travel}
         >
           <Box className={props.classes.inside}>
-            <Logotype variant='travel' />
+            <Logotype variant='incentive' />
             <Box className={props.classes.hidden}>
               <Typography message={messages.tickets.description} />
               <Typography message={messages.learnMore} />
