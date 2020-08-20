@@ -4,8 +4,8 @@ const styles = theme => ({
     width: '100%',
   },
 
-  address: {
-    fontSize: '14px',
+  footerText: {
+    fontSize: '11px',
     color: theme.palette.grey.highEmphasis,
   },
 });
