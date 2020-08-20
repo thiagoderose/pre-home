@@ -17,8 +17,8 @@
   "dependencies": {
     "@koa/router": "^9.4.0",
     "@livipdev/config": "^1.0.1",
-    "@livipdev/containers": "^1.0.1",
-    "@livipdev/core": "^1.0.1",
+    "@livipdev/containers": "^1.0.7",
+    "@livipdev/core": "^1.0.7",
     "@livipdev/icons": "^1.0.0",
     "@livipdev/tokens": "^1.0.0",
     "@material-ui/core": "^4.9.5",
