@@ -5,11 +5,11 @@ const ref = 'components.callout';
 export default defineMessages({
   title: {
     id: `${ref}.title`,
-    defaultMessage: 'Lorem ipsum dolor sit amet?',
+    defaultMessage: 'VIP Experiences in Sports and Entertainment',
   },
 
   subtitle: {
     id: `${ref}.subtitle`,
-    defaultMessage: 'Lorem Ipsum available, but the majority suffered alteration in some.',
+    defaultMessage: 'Somos especialistas em Hospitalidade VIP em eventos esportivos e de entretenimento.',
   },
 });
