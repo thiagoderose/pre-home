@@ -19,6 +19,7 @@ const styles = theme => ({
     '& svg': {
       opacity: 0.4,
       transition: 'all 0.6s ease-out',
+      color: theme.palette.primary.contrastText,
 
       '&:hover': {
         opacity: 1,
