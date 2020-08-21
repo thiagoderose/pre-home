@@ -37,7 +37,7 @@ const ProductSelector = props => (
           <Box className={props.classes.inside}>
             <Logotype variant='incentive' />
             <Box className={props.classes.hidden}>
-              <Typography message={messages.tickets.description} />
+              <Typography message={messages.incentive.description} />
               <Typography message={messages.learnMore} />
             </Box>
           </Box>
@@ -54,7 +54,7 @@ const ProductSelector = props => (
           <Box className={props.classes.inside}>
             <Logotype variant='one' />
             <Box className={props.classes.hidden}>
-              <Typography message={messages.tickets.description} />
+              <Typography message={messages.one.description} />
               <Typography message={messages.learnMore} />
             </Box>
           </Box>

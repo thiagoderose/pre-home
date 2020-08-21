@@ -1,13 +1,26 @@
 import App from 'next/app';
 import React from 'react';
+import accepts from 'accepts';
 import { ThemeProvider, theme } from '@livipdev/core/styles';
 import { createIntl, createIntlCache, RawIntlProvider } from 'react-intl';
 
 import 'typeface-montserrat';
 
 const cache = createIntlCache();
+const supportedLanguages = ['pt-BR'];
 
-export default class TravelApp extends App {
+const getLocale = async ctx => {
+  const accept = accepts(ctx.req);
+  const locale = accept.language(supportedLanguages) || process.env.DEFAULT_LOCALE;
+
+  return locale;
+};
+
+const getMessages = async locale => {
+  return require(`../lang/${locale}.json`);
+};
+
+export default class PreHomeApp extends App {
   static async getInitialProps({ Component, ctx }) {
     let pageProps = {};
 
@@ -15,8 +28,8 @@ export default class TravelApp extends App {
       pageProps = await Component.getInitialProps(ctx);
     }
 
-    const { req } = ctx;
-    const { locale, messages } = req || window.__NEXT_DATA__.props; // eslint-disable-line no-underscore-dangle
+    const locale = await getLocale(ctx)
+    const messages = await getMessages(locale)
 
     return { pageProps, locale, messages };
   }

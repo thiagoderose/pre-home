@@ -11,8 +11,8 @@
     "build": "next build",
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix",
-    "start": "cross-env node server.js",
-    "start:dev": "nodemon server.js"
+    "start": "next start",
+    "start:dev": "next dev"
   },
   "dependencies": {
     "@koa/router": "^9.4.0",

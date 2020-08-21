@@ -10,9 +10,9 @@ export default defineMessages({
     },
   },
 
-  travel: {
+  incentive: {
     description: {
-      id: `${ref}.travel.description`,
+      id: `${ref}.incentive.description`,
       defaultMessage: 'A Livip Incentive desenvolve e opera programas completos de incentivo e relacionamento para empresas, nos melhores eventos esportivos no Brasil e no exterior.',
     },
   },
